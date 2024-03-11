@@ -37,22 +37,10 @@ public class GiveRankCommand extends RRCommand
             return -2;
         }
 
-        int id;
-
-        try
-        {
-            id = (int) RankRedeemer.GetInstance().defaultConfig.GetValue("ranks." + args[0] + ".id");
-        }
-        catch (Exception e)
-        {
-            player.sendMessage(ChatColor.DARK_RED + "Error retrieving rank ID.");
-            return -3;
-        }
-
         meta.addEnchant(Enchantment.MENDING, 1, true);
         meta.setUnbreakable(true);
         meta.addItemFlags(ItemFlag.values());
-        meta.setLore(List.of(new String[]{String.valueOf(id), args[0]}));
+        meta.setLore(List.of(new String[]{args[0]}));
         meta.setDisplayName(ChatColor.GREEN + "Redeem " + args[0] + " rank!");
 
         itemOut.setItemMeta(meta);

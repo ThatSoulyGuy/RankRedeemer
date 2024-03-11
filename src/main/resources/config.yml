@@ -3,10 +3,10 @@
 ranks:
   vip:
     #Numerical ID of the given rank.
-    id: '0'
+    id: 0
     #Name of the rank to promote the player to upon redemption.
     #(NOTE: THIS AND ANY OTHER RANK(s) MUST BE CONFIGURED IN THE LUCK PERMS PLUGIN)
     transform_to: 'vip'
   mvp:
-    id: '1'
+    id: 1
     transform_to: 'mvp'
