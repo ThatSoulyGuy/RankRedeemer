@@ -5,6 +5,7 @@ import net.luckperms.api.LuckPerms;
 import net.luckperms.api.model.user.User;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -40,7 +41,11 @@ public class EventPlayer implements Listener
 
                         luckPerms.getUserManager().saveUser(user);
 
+                        event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0F, 1.0F);
+
                         event.getPlayer().sendMessage(ChatColor.GREEN + "Your rank has been updated to: '" + lore.get(1) + "'!");
+
+                        event.getPlayer().getInventory().removeItem(event.getItem());
                     }
                 }
             }

@@ -1,5 +1,8 @@
 package com.thatsoulyguy.rankredeemer.command;
 
+import com.thatsoulyguy.rankredeemer.command.subcommands.AuthorCommand;
+import com.thatsoulyguy.rankredeemer.command.subcommands.GiveRankCommand;
+import com.thatsoulyguy.rankredeemer.command.subcommands.ReloadCommand;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -9,6 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class CommandManager implements CommandExecutor
 {
@@ -16,7 +20,9 @@ public class CommandManager implements CommandExecutor
 
     public static void Initialize()
     {
-
+        RegisterCommand(new AuthorCommand());
+        RegisterCommand(new GiveRankCommand());
+        RegisterCommand(new ReloadCommand());
     }
 
     public static void RegisterCommand(RRCommand command)

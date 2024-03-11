@@ -25,6 +25,8 @@ public final class RankRedeemer extends JavaPlugin
         if (provider != null)
             luckPerms = provider.getProvider();
 
+        CommandManager.Initialize();
+
         getServer().getPluginManager().registerEvents(new EventPlayer(), this);
         getCommand("rankredeemer").setExecutor(new CommandManager());
 
