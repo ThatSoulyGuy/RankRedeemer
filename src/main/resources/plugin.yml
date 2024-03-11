@@ -4,3 +4,13 @@ main: com.thatsoulyguy.rankredeemer.RankRedeemer
 api-version: '1.20'
 depend:
   - LuckPerms
+
+commands:
+  rankredeemer:
+    aliases:
+      - rankr
+      - rredeemer
+      - rnkrdeemr
+      - rdeemr
+      - rnkr
+      - rr
